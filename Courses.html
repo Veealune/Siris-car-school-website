@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Courses</title>
+    <style>
+        /* Additional CSS for better design */
+
+        body {
+    background-color: #94d0f8;
+}
+
+    </style>
+</head>
+<body>
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.querySelector("nav ul.menu");
+
+    // Check if the window width is greater than 768px
+    function checkScreenWidth() {
+        if (window.innerWidth > 768) {
+            // Hide the dropdown button
+            menuToggle.style.display = "none";
+            // Show the menu items
+            menu.classList.add("active");
+        } else {
+            // Show the dropdown button
+            menuToggle.style.display = "block";
+            // Hide the menu items
+            menu.classList.remove("active");
+        }
+    }
+
+    // Call checkScreenWidth on page load
+    checkScreenWidth();
+
+    // Call checkScreenWidth on window resize
+    window.addEventListener("resize", checkScreenWidth);
+
+    // Toggle the "active" class on menu when menuToggle is clicked
+    menuToggle.addEventListener("click", function() {
+        menu.classList.toggle("active");
+    });
+});
+
+
+    </script>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Logo.png" alt="Logo">
+            </div>
+            <nav>
+                <button id="menu-toggle">&#9776;</button>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="https://www.highwaycodeuk.co.uk/">Highway Code</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="courses">
+            <div class="container">
+                <h2>Our Courses and Prices</h2>
+                <table>
+                    <tr>
+                        <th>Course</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1 hour lesson</td>
+                        <td>Lesson with an instuctor for one hour.</td>
+                        <td>40£</td>
+                    </tr>
+                    <tr>
+                        <td>2 hour lesson</td>
+                        <td>Lesson with an instuctor for two hour</td>
+                        <td>80£</td>
+                    </tr>
+                    <tr>
+                        <td>Block of 10 hours</td>
+                        <td>a Block of lessons totaling 10 hours behind the wheel with an instructor.</td>
+                        <td>780£</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="hours">
+            <div class="container">
+                <h2>Operating Hours</h2>
+                <p>Monday - Sunday: 8:00 AM - 8:00 PM</p>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="contact-items">
+                <div class="contact-item">
+                    <img src="phone.png" alt="Phone">
+                    <div class="text">+447449971720</div>
+                </div>
+                <div class="contact-item">
+                    <a href="https://www.instagram.com/siirisschoolofmotoring" target="_blank">
+                        <img src="instagram.png" alt="Instagram">
+                    </a>
+                    <div class="text">@siirisschoolofmotoring</div>
+                </div>
+                <div class="contact-item">
+                    <img src="email.png" alt="Email">
+                    <div class="text">info@siirisschool.com</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

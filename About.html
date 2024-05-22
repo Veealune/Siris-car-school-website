@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>About Us - Siiri's School of Motoring</title>
+    <style>
+        /* Additional CSS for layout adjustments */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about-content {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .image-container {
+            flex: 1;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .header2 {
+            background-color: #65B6F3;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            max-width: 900px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            font-weight: bolder;
+        }
+        .header2 .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #ffffff;
+        }
+        .header2 h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .header2 p {
+            color: white;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #f2f5f7;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .contact-items {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.querySelector("nav ul.menu");
+
+    // Check if the window width is greater than 768px
+    function checkScreenWidth() {
+        if (window.innerWidth > 768) {
+            // Hide the dropdown button
+            menuToggle.style.display = "none";
+            // Show the menu items
+            menu.classList.add("active");
+        } else {
+            // Show the dropdown button
+            menuToggle.style.display = "block";
+            // Hide the menu items
+            menu.classList.remove("active");
+        }
+    }
+
+    // Call checkScreenWidth on page load
+    checkScreenWidth();
+
+    // Call checkScreenWidth on window resize
+    window.addEventListener("resize", checkScreenWidth);
+
+    // Toggle the "active" class on menu when menuToggle is clicked
+    menuToggle.addEventListener("click", function() {
+        menu.classList.toggle("active");
+    });
+});
+
+    </script>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Logo.png" alt="Logo">
+            </div>
+            <nav>
+                <button id="menu-toggle">&#9776;</button>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="https://www.highwaycodeuk.co.uk/">Highway Code</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="header2">
+                        <div class="container">
+                            <h2>About Siiri's School of Motoring</h2>
+                            <p>Welcome to Siiri's School of Motoring, where we are passionate about teaching safe and responsible driving habits. With years of experience in the industry, we have helped countless individuals become confident and skilled drivers.</p>
+                            <p>At our driving school, we prioritize personalized instruction tailored to each student's needs. Whether you're a complete beginner or looking to polish your skills, our team of dedicated instructors is here to guide you every step of the way.</p>
+                            <p>Our mission is not just to help you pass your driving test, but to equip you with the knowledge and confidence to navigate any road with ease. With a focus on defensive driving techniques and practical hands-on training, we ensure that our graduates are prepared for whatever the road may throw their way.</p>
+                            <p>Join us at Siiri's School of Motoring and take the first step towards a lifetime of safe and enjoyable driving!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="advertisment.png" alt="About Us Image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <div class="container">
+            <div class="contact-items">
+                <div class="contact-item">
+                    <img src="phone.png" alt="Phone">
+                    <div class="text">+447449971720</div>
+                </div>
+                <div class="contact-item">
+                    <a href="https://www.instagram.com/siirisschoolofmotoring" target="_blank">
+                        <img src="instagram.png" alt="Instagram">
+                    </a>
+                    <div class="text">@siirisschoolofmotoring</div>
+                </div>
+                <div class="contact-item">
+                    <img src="email.png" alt="Email">
+                    <div class="text">info@siirisschool.com</div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

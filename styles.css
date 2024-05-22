@@ -1,0 +1,663 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f7;
+    color: #444444;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: center;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Adjust logo height as needed */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #252527;
+    position: relative;
+    font-weight: bold;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #65B6F3;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+main {
+    padding: 40px 0;
+}
+
+.hero {
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.offer {
+    padding: 40px 0;
+}
+
+.offer h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.offer-item {
+    text-align: center;
+}
+
+.offer-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.offer-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    
+}
+
+.pricing p {
+    margin-bottom: 10px;
+}
+
+
+.location {
+    padding: 40px 0;
+}
+
+.location h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.map {
+    text-align: center;
+}
+
+.reviews {
+    background-color: #65B6F3;
+    padding: 40px 0;
+}
+
+.reviews h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.review-item {
+    background-color: #65B6F3;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Ensure the background image covers the entire container */
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.slide-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.slide-content p {
+    font-size: 18px;
+    text-align: right;
+}
+
+.offer h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.offer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.offer-item {
+    width: 30%; /* Adjust the width as needed */
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add a slight shadow */
+    background-color: #65B6F3;
+}
+
+.offer-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.offer-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.offer-item p {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.contacts {
+    padding: 40px 0;
+    text-align: center; /* Center the content horizontally */
+}
+
+.contact-items {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the items horizontally */
+}
+
+.contact-item {
+    margin: 0 10px; /* Adjust spacing between items */
+}
+
+.contact-item img {
+    width: 100px; /* Adjust image size */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #f2f5f7;
+    padding: 20px 0;
+    text-align: center; /* Center the text horizontally */
+}
+
+footer p {
+    font-size: 20px;
+    color: #666666;
+}
+
+.header2 {
+    background-color: #65B6F3;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px; /* Add border radius to create a rounded corner effect */
+    margin: 20px auto; /* Center the box horizontally and add some space around it */
+    max-width: 900px; /* Limit the maximum width of the box */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add a slight shadow */
+    font-weight: bolder;
+}
+.header2 .container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    color: #ffffff;
+}
+
+.header2 h2 {
+    color: white;
+    margin-bottom: 20px; /* Add some bottom margin to create space between text and button */
+    font-weight: bold; /* Make the text bold */
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #2b98fd;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: #2b98fd;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+th {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+
+.courses, .hours, .contacts {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+.hours p {
+    margin-bottom: 10px;
+}
+
+
+.question-slide {
+    display: none;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.question-slide.active {
+    display: block;
+}
+
+form {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.check-answers {
+    background-color: #008CBA; /* Blue */
+}
+
+.check-answers:hover {
+    background-color: #005f78; /* Darker blue */
+}
+
+.navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#results {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.wrong-answer {
+    color: red;
+}
+
+
+
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#options {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #008CBA;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+
+.header3 {
+    background-color: #65B6F3;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px; /* Add border radius to create a rounded corner effect */
+    margin: 20px auto; /* Center the box horizontally and add some space around it */
+    max-width: 1500px; /* Limit the maximum width of the box */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add a slight shadow */
+    font-weight: bolder;
+}
+.header3 .container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    color: #ffffff;
+}
+
+.header3 h2 {
+    color: white;
+    margin-bottom: 20px; /* Add some bottom margin to create space between text and button */
+    font-weight: bold; /* Make the text bold */
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .offer-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the boxes horizontally */
+    }
+
+    .offer-item {
+        width: 90%; /* Adjust the width to occupy 90% of the screen */
+        max-width: 300px; /* Limit the maximum width of the boxes */
+        margin: 10px; /* Add some margin between the boxes */
+    }
+
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    .container {
+        flex-direction: column;
+    }
+    .about-content,
+    .image-container {
+        width: 100%;
+    }
+    .contact-items {
+        flex-direction: column;
+    }
+    .contact-item {
+        margin-bottom: 20px; /* Add spacing between contact items on smaller screens */
+    }
+    .contact-item img {
+        margin-bottom: 10px; /* Add spacing below contact icons on smaller screens */
+    }
+}
+
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: block;
+    }
+
+    nav label {
+        display: block;
+        cursor:pointer;
+        text-align: center;
+    }
+    .location .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map iframe {
+        width: 100%; /* Make the map iframe fill the container width */
+        height: 400px; /* Set a fixed height for the map on mobile devices */
+    }
+    .slider {
+        display: none; /* Hide the slider on mobile */
+    }
+
+    .mobile-menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 60px; /* Adjust as needed */
+    }
+
+    .mobile-menu li {
+        flex: 1;
+        text-align: center;
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #333333;
+    }
+
+
+
+    
+/* Dropdown menu styles */
+nav ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul.menu li {
+    display: inline-block;
+}
+
+nav ul.menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333333;
+}
+
+/* Media query for mobile */
+@media screen and (max-width: 768px) {
+    header .container {
+        position: relative;
+    }
+
+    nav {
+        position: relative;
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    nav ul.menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.menu.active {
+        display: block;
+    }
+
+    nav ul.menu li {
+        text-align: center;
+        display: block;
+    }
+
+    nav ul.menu li a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #333333;
+    }
+    .menu {
+        display: none; /* Hide the menu by default on mobile */
+        flex-direction: column; /* Adjust layout for mobile */
+        position: absolute; /* Position the menu */
+        top: 50px; /* Adjust the top position */
+        left: 0; /* Align to the left */
+        background-color: #f9f9f9; /* Background color */
+        width: 100%; /* Full width */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        border: 1px solid #ccc; /* Border */
+        border-radius: 0; /* Remove border radius */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow */
+    }
+    .menu.active {
+        display: flex; /* Show the menu when active */
+    }
+    .menu li {
+        padding: 10px; /* Padding for menu items */
+        border-bottom: 1px solid #ddd; /* Border between items */
+    }
+}
+
+ /* Media query for larger screens */
+ @media screen and (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Show the menu items on smaller screens */
+    .menu {
+        display: flex;
+    }
+
+    /* Hide the dropdown form on larger screens */
+    nav ul.menu {
+        display: none;
+    }
+}
+}

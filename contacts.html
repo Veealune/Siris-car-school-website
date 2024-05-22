@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contacts - Siiri's School of Motoring</title>
+    <style>
+        /* Additional CSS for contact page */
+        body {
+            background-color: #65B6F3;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .contact-items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .contact-item {
+            text-align: center;
+            margin: 10px;
+        }
+        .contact-item img {
+            max-width: 100px;
+            height: auto;
+        }
+        .contact-item .text {
+            margin-top: 10px;
+        }
+        /* Reviews section */
+        .reviews {
+            padding: 40px 0;
+            background-color: #ffffff;
+        }
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+        .review-item {
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .review-item p {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Logo.png" alt="Logo">
+            </div>
+            <nav>
+                <button id="menu-toggle">&#9776;</button>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="https://www.highwaycodeuk.co.uk/">Highway Code</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contacts">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <img src="phone.png" alt="Phone">
+                        <div class="text">+447449971720</div>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://www.instagram.com/siirisschoolofmotoring" target="_blank">
+                            <img src="instagram.png" alt="Instagram">
+                        </a>
+                        <div class="text">@siirisschoolofmotoring</div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="email.png" alt="Email">
+                        <div class="text">info@siirisschool.com</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews section -->
+        <section class="reviews">
+            <div class="container">
+                <h2>Customer Reviews</h2>
+                <div class="review-grid">
+                    <div class="review-item">
+                        <h3>Ravinder Kumar</h3>
+                        <p>"Today I passed my test was incredible moment with my driving instructor Siiri who encouraged and helped me a lot when I didn’t have knowledge about basic functions but she taught everything about car from basic to advance. Thanks to her again."</p>
+                    </div>
+                    <div class="review-item">
+                        <h3>Vinay Das</h3>
+                        <p>"I had an incredible experience with my driving instructor Siiri ! She was very patient, knowledgeable, and provided clear instructions throughout my lessons. Thanks to her guidance, I not only passed my driving test in Barnstaple today with just 2 minors but also gained the confidence to become a safe and skilled driver. I highly recommend Siiri’s School of motoring to anyone looking to learn how to drive"</p>
+                    </div>
+                    <div class="review-item">
+                        <h3>EJB 88</h3>
+                        <p>"Siiri did a great professional job getting me through my driving test.V good and patient at explaining all aspects needed to take and pass the test,, highly recommended. Many thanks Siiri."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <!-- Footer content -->
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript code for toggling the mobile menu
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.getElementById("menu-toggle");
+            const menu = document.querySelector("nav ul.menu");
+
+            function checkScreenWidth() {
+                if (window.innerWidth > 768) {
+                    menuToggle.style.display = "none";
+                    menu.classList.add("active");
+                } else {
+                    menuToggle.style.display = "block";
+                    menu.classList.remove("active");
+                }
+            }
+
+            checkScreenWidth();
+
+            window.addEventListener("resize", checkScreenWidth);
+
+            menuToggle.addEventListener("click", function() {
+                menu.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>
